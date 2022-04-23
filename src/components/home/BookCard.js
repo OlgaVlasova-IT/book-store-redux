@@ -1,6 +1,5 @@
-// import { useState } from "react"
+
 import { useDispatch, useSelector } from "react-redux"
-// import { addToCart } from "../../redux/cartSlice"
 import { getShowMore, handleShowMore } from "../../redux/ShowMoreSlice"
 import BookCardDetails from "./BookCardDetails"
 
