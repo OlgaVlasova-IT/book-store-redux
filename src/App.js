@@ -40,12 +40,12 @@ function App() {
           <Link to="/" className="link">
             Home
           </Link>
-          {/* <Link to="/Bestsellers" className="link">
+          <Link to="/Bestsellers" className="link">
             BestSellers
           </Link>
           <Link to="/Contact" className="link">
             Contact
-          </Link> */}
+          </Link>
          
           <div className="cartIconCont" onClick={()=>{showCart()}} >
           <p className="itemsInACart">{cartList.length}</p>
