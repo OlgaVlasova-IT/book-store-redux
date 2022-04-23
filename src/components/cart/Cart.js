@@ -16,7 +16,7 @@ return (
       <div className="additionalCont">
         <div className="titleCont">
           <p>Name</p>
-          <p>Qnt.</p>
+          <p>Q.</p>
         </div>
         <div className="priceCont">
           <p>$</p>
@@ -31,8 +31,8 @@ return (
       <CartItem book={item} key={item.id} />
     ))}
 
-    <div>
-      <p>Total:${cartList.reduce( (sum, cur) => sum + cur.price, 0).toFixed(2)}</p>
+    <div className="totalCont">
+      <h3>Total:     ${cartList.reduce( (sum, cur) => sum + cur.price, 0).toFixed(2)}</h3>
     </div>
   </div>
 );

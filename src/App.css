@@ -243,6 +243,14 @@ text-align: center;
     flex-wrap: wrap;
     font-size: 12px;
 }
+.totalCont{
+  display: flex;
+  justify-content: right;
+  padding: 15px;
+  border-top: solid 2px  #BA8F6B;
+  margin-right: 10px;
+
+}
 .itemsInACart {
   position: absolute;
   top: -1.5;
