@@ -1,0 +1,513 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&family=Parisienne&family=Tangerine&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300&display=swap');
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Marcellus SC', serif;
+
+}
+.books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.headingCont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-family: 'Tangerine', cursive;
+  font-size: 40px;
+ text-align: center;
+}
+.showMoreBtn {
+  background-color: transparent;
+  border: none;
+  color:#089DE3;
+  font-family: 'Hind Vadodara', sans-serif;
+}
+.author {
+  color: #9E866B;
+  font-weight: bold;
+  margin: 2px;
+
+
+}
+.price {
+  font-weight: bold;
+}
+.navBar {
+  height: 10%;
+  display: flex;
+justify-content: center;
+ background-color: #cfd8dc;
+ color: black;
+ text-decoration: uppercase;
+}
+
+.link {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px 40px;
+ 
+ }
+.desc {
+  font-family: 'Hind Vadodara', sans-serif;
+}
+.upperBlock{
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 95%;
+  margin: 5px;
+}
+
+.bestsellersMainCont{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.totalCont{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
+}
+.btnNextPrev {
+  background-color: #9E866B;
+  border-radius: 5px;
+  border:none;
+  color: whitesmoke;
+  width: 60px;
+  height: 30px;
+  font-family: 'Hind Vadodara', sans-serif;
+}
+
+.quantity {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.addToCart{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.btnCancelNoDisplay{
+  opacity: 0;
+}
+.changeQ{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.priceCont{
+  text-align: right;
+  margin-left: 10px;
+}
+.bestCont{
+
+text-align: center;
+}
+.btnQuantity{
+  font-family: 'Hind Vadodara', sans-serif;
+  background-color: #95c7d0;
+  border-radius: 5px;
+  border: none;
+  /* color: whitesmoke; */
+  width: 30px;
+  height: 30px;
+ 
+
+}
+.btnQuantity:hover{
+  background-color: #336B75;
+  color: whitesmoke
+
+} 
+.amount {
+  margin: 8px
+}
+.additionalCont{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.btnAddToCart{
+  font-family: 'Hind Vadodara', sans-serif;
+  background-color: #95c7d0;
+  border-radius: 5px;
+  border: none;
+  /* color: whitesmoke; */
+  height: auto;
+  width: 120px;
+  padding: 10px;
+
+}
+.btnAddToCart:hover{
+  background-color: #336B75;
+  color: whitesmoke
+
+} 
+
+.booksCatalog {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+.card {
+  height: 25hv;
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: solid 2px lightgrey;
+  padding: 2%;
+  margin: 5px;
+
+}
+.btnSort{
+  font-family: 'Hind Vadodara', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background-color: #95c7d0;
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  /* border: 2px solid #336B75; */
+ 
+}
+
+.btnSort:hover {
+  background-color: #3e828e; 
+  color: whitesmoke;
+  text-transform: uppercase;
+
+}
+
+.sortCont{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cartIconCont {
+  position: absolute;
+  top: 2em;
+  right: 4em;
+}
+#cart{
+  display: none;
+  
+}
+
+.cart{
+  display: none;
+  background-color: #e1dad0; 
+    position: absolute;
+    top: 6.0em;
+    right: 4.5em;
+    min-width: 3em;
+    min-height: 3em;
+    width: 100hv;
+    height: auto;
+    cursor: pointer;
+    border: solid 2px  #BA8F6B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+.itemsInACart {
+  position: absolute;
+  top: -1.5;
+  right: 0.0005em;
+  z-index: 100;
+  width:24px;
+  height: 24px;
+  border-radius: 12px;
+ text-align: center;
+  background-color: #95c7d0;
+  margin: 0;
+  
+}
+.titleCont{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  flex-wrap: wrap;
+  width: 200px;
+}
+li {
+  text-align: left;
+  list-style-type: none;
+}
+.liCont {
+  padding:10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.btnCancel{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-color: transparent ;
+  border-radius: 10px;
+  height: 30px;
+  width: 30px;
+ border:none;
+  padding: 3px 3px 3px 3px;
+
+
+}
+.cardBestseller{
+ 
+  font-family: 'Marcellus SC', serif;
+  height: 28hv;
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2%;
+  margin: 5px;
+
+}
+.noDisplay {
+  display: none;
+}
+
+.bestsellersCont{
+  height: 35hv;
+  width:120%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 2px lightgrey;
+  border-bottom: solid 2px lightgrey;
+  padding: 2%;
+  margin: 5px;
+}
+
+.imgCont{
+  width:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+ }
+
+.detailsCont{
+  width:50%;
+ display: flex;
+ flex-direction: column;
+ align-items: right;
+ justify-content: flex-start;
+ flex-grow: 1;
+ flex-shrink: 1;
+ flex-wrap: wrap;
+ padding-left: 20px;
+}
+
+.descCont{
+display: flex; 
+justify-content: flex-start; 
+width: 95%;
+height: auto;
+
+}
+
+.filterCont{
+  width:50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* border-top: solid 2px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.filterBtn{
+  font-family: 'Hind Vadodara', sans-serif;
+  text-align: center;
+ background-color: #e1dad0; 
+ color: black;
+ /* border:2px solid #9E866B; */
+ width: 70px;
+ height: 70px;
+ border-radius: 35px;
+ border-style: none  ;
+
+ 
+}
+
+.filterBtn:hover{
+  text-transform: uppercase;
+ background-color: #9E866B; 
+ color: whitesmoke;
+}
+
+
+.filterRootCont{
+ display: flex;
+ justify-content: center;
+ margin-bottom: 20px;
+ 
+}
+.coverCont{
+  width:100%;
+  background-image: url("/public/image/cover.jpg");
+  background-size: cover;
+  background-size: 2000px;
+  background-repeat: +no-repeat;
+  
+
+}
+
+@media all and (max-width: 800px) {
+  #cart{
+    
+    position: absolute;
+   
+  }
+  .filterBtn {
+
+    margin: 10px;
+  }
+  .cartIconCont {
+    position: absolute;
+    top: 2em;
+    right: 1em;}
+  .cart{
+    
+      position: absolute;
+      top: 6.0em;
+      right: 1em;}
+
+
+  .bestsellersMainCont{
+    width: 95%;
+
+  }
+  .btnSort{
+
+
+    font-size: 12px;
+    height: 40px;
+    padding: 3px;
+    margin: 3px;
+  }
+  .cardBestseller{
+ border-bottom: 2px solid lightgray;
+    width:120%;
+    display: flex;
+    padding-bottom: 10px;
+  }
+
+  .bestsellersCont{
+    /* height: 35hv; */
+    width:95%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0; 
+  }
+  .sortCont{
+    width: 95%;
+  }
+  .filterCont{
+    width:80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border-top: solid 2px; */
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .navBar {
+    flex-direction: column;
+    font-family: 'Hind Vadodara', sans-serif;
+  }
+
+  
+  .link {
+    margin: 0;
+    padding: 5px;
+    text-decoration: none;
+    /* padding: 5px 10px; */
+   
+   }
+.card{
+  width: 95%;
+}
+
+.upperBlock{
+
+  width:100%;
+}
+
+
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
