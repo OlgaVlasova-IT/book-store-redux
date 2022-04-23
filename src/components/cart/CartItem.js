@@ -1,5 +1,5 @@
 import cancelIcon from '../../icons/cancel.png'
-import { useSelector, useDispatch} from "react-redux";
+import {  useDispatch} from "react-redux";
 import { deleteItem } from '../../redux/cartSlice';
 
 const CartItem = ({book}) => {
@@ -17,7 +17,7 @@ return(<div>
            <p>{quantity}</p>
         </div>
         <div className="priceCont">
-        <p>${price}</p>
+        <p>${price.toFixed(2)}</p>
         </div>
         </div>
         <button className="btnCancel" 

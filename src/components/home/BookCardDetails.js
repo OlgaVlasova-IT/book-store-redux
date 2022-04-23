@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux"
+// import { useDispatch } from "react-redux"
 
 import ChangeQuantity from "../cart/ChangeQuantity";
 const BookCardDetails = ({image, price, author,bookname, searchTerm, id}) =>{
-const dispatch = useDispatch();
+// const dispatch = useDispatch();
 const [ amount, setAmount] =useState(1)
  return(
     <div className="upperBlock" key={id}>
@@ -19,7 +19,7 @@ const [ amount, setAmount] =useState(1)
       <p>
         category:<span className="author">{searchTerm}</span>
       </p>
-      <ChangeQuantity  id ={id}/>
+      <ChangeQuantity  id ={id} amount={amount} setAmount={setAmount}/>
       <p className="price"> ${price}</p>
       {/* <button>Like</button> */}
      

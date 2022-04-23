@@ -1,26 +1,26 @@
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
-import { increment, decrement, getQuantity } from "../../redux/quantitySlice";
 
-const ChangeQuantity = ({ id }) => {
+
+const ChangeQuantity = ({ id, amount, setAmount }) => {
   const dispatch = useDispatch();
-  const quantity = useSelector(getQuantity);
   return (
     <div className="changeQ">
       <div className="quantity">
         <button
           className="btnQuantity"
           onClick={() => {
-            dispatch(decrement());
+            if (amount >1) 
+            setAmount(amount-1);
           }}
         >
           -
         </button>
-        <p className="amount">{quantity}</p>
+        <p className="amount">{amount}</p>
         <button
           className="btnQuantity"
           onClick={() => {
-            dispatch(increment());
+            setAmount(amount+1);
           }}
         >
           +
@@ -30,7 +30,7 @@ const ChangeQuantity = ({ id }) => {
           <button
             className="btnAddToCart"
             onClick={() => {
-              dispatch(addToCart({ id, quantity }));
+              dispatch(addToCart({ id, amount }));
             }}
           >
             ADD TO CART

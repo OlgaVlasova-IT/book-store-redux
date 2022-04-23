@@ -14,14 +14,11 @@ export const showMoreSlice = createSlice({
   },
   reducers: {
     handleShowMore: (state, action) => {
-      console.log("action.payload " + action.payload);
-        console.log ("state before " + state.showMoreState);
-  
-  
+    
         let temp = [...state.showMoreState];
         temp[action.payload - 1] = !temp[action.payload  - 1];
         state.showMoreState =[...temp]
-        console.log("state after " + state.showMoreState);
+    
     }
 
 

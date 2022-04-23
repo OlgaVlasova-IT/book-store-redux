@@ -1,7 +1,8 @@
 import { useSelector, useDispatch} from "react-redux";
-import {  getCartList } from "../../redux/cartSlice";
+import {  emptyCart, getCartList } from "../../redux/cartSlice";
 import CartItem from "./CartItem";
 import cancelIcon from '../../icons/cancel.png'
+
 
 const Cart = ()=> {
 const cartList = useSelector(getCartList)
@@ -21,7 +22,7 @@ return (
           <p>$</p>
         </div>
       </div>
-      <button className="btnCancel">
+      <button className="btnCancel" onClick={()=>{dispatch(emptyCart())}}>
         <img src={cancelIcon} alt="delete Icon" width="15px" height="15px" />
       </button>
     </div>
@@ -29,6 +30,10 @@ return (
     {cartList.map((item) => (
       <CartItem book={item} key={item.id} />
     ))}
+
+    <div>
+      <p>Total:${cartList.reduce( (sum, cur) => sum + cur.price, 0).toFixed(2)}</p>
+    </div>
   </div>
 );
 

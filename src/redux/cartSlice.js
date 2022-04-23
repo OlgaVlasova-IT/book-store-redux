@@ -13,19 +13,25 @@ export const cartSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-         
+
+      
+
         let temp =books.filter( book => action.payload.id === book.id)
         
         state.itemList.push({id: temp[0].id,
           bookname: temp[0].bookname,
           image : temp[0].image,
-          price: temp[0].price*action.payload.quantity,
-          quantity: action.payload.quantity
-        })
+          price: temp[0].price*action.payload.amount,
+          quantity: action.payload.amount
+      })
     },
     deleteItem: (state, action) =>{
 
       state.itemList =[...state.itemList.filter(item => item.id !== action.payload.id)]
+    },
+
+    emptyCart: ( state, action) => {
+      state.itemList = []
     }
 
 
@@ -34,6 +40,6 @@ export const cartSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 export const getCartList = state => state.cart.itemList
-export const { addToCart, deleteItem} = cartSlice.actions
+export const { addToCart, deleteItem, emptyCart} = cartSlice.actions
 
 export default cartSlice.reducer
