@@ -422,7 +422,8 @@ height: auto;
     
       position: absolute;
       top: 6.0em;
-      right: 1em;}
+      right: 0;
+    }
 
 
   .bestsellersMainCont{
