@@ -410,16 +410,24 @@ height: auto;
     position: absolute;
    
   }
+  #cartIcon {
+    width: 35px;
+  }
+  .itemsInACart {
+  
+    width: 24px;
+    height: 24px;
+    border-radius: 9px;
+  }
   .filterBtn {
 
     margin: 10px;
   }
   .cartIconCont {
     position: absolute;
-    top: 2em;
+    top: 0.3em;
     right: 1em;}
   .cart{
-    
       position: absolute;
       top: 6.0em;
       right: 0;
@@ -432,8 +440,6 @@ height: auto;
 
   }
   .btnSort{
-
-
     font-size: 12px;
     height: 40px;
     padding: 3px;
